@@ -29,3 +29,7 @@
 
 # vim temp files
 *.swp
+
+# Doxygen
+/docs
+!/docs/doxygen.cfg

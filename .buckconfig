@@ -1,0 +1,30 @@
+# Copyright (c) 2019-present, DIEGO DAGUM.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+[cache]
+  mode = dir
+
+[cxx]
+  cflags = -g -std=c11
+  cxxflags = -g -std=c++14 -stdlib=libc++ -Werror -Wall
+  # Many ARC APIs don't compile with separate preprocess and compile.
+  combined_preprocess_and_compile = true
+
+[alias]
+  terminal = //samples/terminal:main
+  test = //tests:main
+
+[parser]
+  default_build_file_syntax = skylark
+
+[project]
+    default_android_manifest = //samples/android/AndroidManifest.xml
+    ignore = .buckd, \
+             .hg, \
+             .git, \
+             .idea, \
+             buck-cache, \
+             buck-out, \
