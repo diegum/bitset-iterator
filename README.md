@@ -144,18 +144,22 @@ This C++ library is cross-platform and comes with a terminal sample app that sho
 
 ## Building requirements
 
-Make sure you've [installed Buck](https://buckbuild.com/setup/install.html).
+Make sure you've installed [Buck](https://buckbuild.com/setup/install.html) and [Doxygen](http://www.doxygen.nl).
 
-## Building and running
+### Building and running
 
-You can build the demo applications from the command line!
-
-### Terminal (macOS, Linux, Windows, ...)
+You can build the demo applications from the command line! For all the following, just make sure that you are at the project root.
 
     $ buck run terminal
 
-## Testing
+### Testing
 
 This library aggregates a Catch/2 test framework. To build and run tests:
 
     $ buck run test
+
+### Building the documentation
+
+Make sure that any revision to the code is backed by Doxygen-savvy comments.
+
+    $ doxygen docs/doxygen.cfg
