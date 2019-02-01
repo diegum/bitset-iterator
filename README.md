@@ -77,7 +77,7 @@ Ideally, you shouldn't deal with the iterator yourself. Just call either of thes
 
 ## How to install
 
-This is a header-only template library. Just get a copy of `src/bitset_iter.h` and place it handy in your project.
+This is a header-only template library. Just get a copy of [`src/bitset_iter.h`](https://github.com/diegum/bitset-iterator/blob/master/src/bitset_iter.h) and place it handy in your project.
 
 I suggest you to create a bitset directory (e.g., `your_project/third_party/bitset`). Then, add that route to the `--include-directory=<path>` flag (`-I <path>` for short).
 
