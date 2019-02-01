@@ -144,9 +144,7 @@ This C++ library is cross-platform and comes with a terminal sample app that sho
 
 ## Building requirements
 
-Make sure you've [installed Buck](https://buckbuild.com/setup/install.html),
-and if you want to use the Android code, make sure you've [setup your
-environment properly](https://buckbuild.com/setup/getting_started.html)
+Make sure you've [installed Buck](https://buckbuild.com/setup/install.html).
 
 ## Building and running
 
