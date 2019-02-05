@@ -1,4 +1,4 @@
-// bitset_iter.h v1.1.0
+// bitset_iter.h v1.1.2
 // Copyright 2019, Diego Dagum
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,6 +21,33 @@
 
 #ifndef BITSET_ITER_H
 #define BITSET_ITER_H
+
+/**
+ * @mainpage Bitset Iterator
+ *
+ * This template-based, header-only project brings the possibility to treat an
+ * std::bitset as a set of indices.
+ *
+ * The main namespace is bitset. Relevant functions to leverage are
+ * indices_on and indices_off.
+ *
+ * @code{.cpp}
+ * #include <bitset>
+ * #include "bitset_iter.h"
+ *
+ * std::bitset<32> my_bitset{ 0b10101010101010101010101010101010 };
+ *
+ * for (const auto& index : bitset::indices_on(my_bitset)) {
+ *   std::cout << index << ", ";
+ * }
+ * // Prints "1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, "
+ *
+ * for (const auto& index : bitset::indices_off(my_bitset)) {
+ *   std::cout << index << ", ";
+ * }
+ * // Prints "0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, "
+ * @endcode
+ */
 
 #include <bitset>
 #include <iterator>
