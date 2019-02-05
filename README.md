@@ -144,7 +144,7 @@ This C++ library is cross-platform and comes with a terminal sample app that sho
 
 ## Building requirements
 
-Make sure you've installed [Buck](https://buckbuild.com/setup/install.html) and [Doxygen](http://www.doxygen.nl).
+Make sure you've installed [Buck](https://buckbuild.com/setup/install.html).
 
 ### Building and running
 
@@ -158,8 +158,14 @@ This library aggregates a Catch/2 test framework. To build and run tests:
 
     $ buck run test
 
+### Style checking
+
+You'll need [Cppcheck](http://cppcheck.sourceforge.net) in your machine. Make sure that no code change ain't committed without checking C++ coding style.
+
+    $ buck run lint
+
 ### Building the documentation
 
-Make sure that any revision to the code is backed by Doxygen-savvy comments.
+You'll need [Doxygen](http://www.doxygen.nl) in your machine. Make sure that any revision to the code is backed by Doxygen-savvy comments.
 
-    $ doxygen docs/doxygen.cfg
+    $ buck run doc

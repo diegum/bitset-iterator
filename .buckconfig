@@ -16,6 +16,8 @@
 [alias]
   terminal = //samples/terminal:main
   test = //tests:main
+  lint = //:lint
+  doc = //:doc
 
 [parser]
   default_build_file_syntax = skylark
