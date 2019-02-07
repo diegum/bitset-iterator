@@ -1,4 +1,4 @@
-// bitset_iter.h v1.1.2
+// bitset_iter.h v1.1.3
 // Copyright 2019, Diego Dagum
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -214,6 +214,22 @@ public:
     iterator.index = SIZE;
 
     return iterator;
+  }
+
+  /**
+   * @brief      Operator is-equal.
+   */
+  bool operator==(const index_iterable& rhs) const
+  {
+    return this->bitset == rhs.bitset;
+  }
+
+  /**
+   * @brief      Operator not-equal.
+   */
+  bool operator!=(const index_iterable& rhs) const
+  {
+    return not this->operator==(rhs);
   }
 
 private:
